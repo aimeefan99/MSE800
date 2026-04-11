@@ -12,6 +12,7 @@ The program takes user input for base (x) and exponent (y), then returns the cal
 MSE800-PSD/
 └── Week1/
     ├── power.py
+    ├── testresult.png
     ├── README.md
 ```
 
