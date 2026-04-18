@@ -1,6 +1,6 @@
 # Student Information Management System
 # This program collects student data (name, age, student ID) for multiple students
-# and displays them sorted by student ID.
+# and displays them sorted by student name.
 
 class Student:
     def __init__(self, name, age, student_id):
@@ -18,10 +18,10 @@ def collect_students(num_students):
     return students
 
 def print_students(students):
-    sorted_students = sorted(students, key=lambda s: int(s.student_id))
-    print("List of students (sorted by student ID):")
+    sorted_students = sorted(students, key=lambda s: s.name)
+    print("List of students (sorted by name):")
     for student in sorted_students:
-        print(f"Student ID: {student.student_id}, Name: {student.name}, Age: {student.age}")
+        print(f"Name: {student.name}, Age: {student.age}")
 
 if __name__ == "__main__":
     num_students = 3  # Collecting data for at least three students
