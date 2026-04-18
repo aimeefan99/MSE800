@@ -18,8 +18,8 @@ def collect_students(num_students):
     return students
 
 def print_students(students):
-    sorted_students = sorted(students, key=lambda s: s.name)
-    print("List of students (sorted by name):")
+    sorted_students = sorted(students, key=lambda s: s.age)
+    print("List of students (sorted by age):")
     for student in sorted_students:
         print(f"Name: {student.name}, Age: {student.age}")
 
