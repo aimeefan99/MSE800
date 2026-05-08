@@ -1,0 +1,148 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="02pl4VQFg-tc0q0uCEew">
+    <mxGraphModel dx="937" dy="652" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="sys_boundary" parent="1" style="shape=mxgraph.basic.rect;fillColor2=none;strokeWidth=1;size=20;indent=5;verticalAlign=top;fontStyle=1;fontSize=14;" value="Banking System" vertex="1">
+          <mxGeometry height="640" width="420" x="310" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_user" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" value="Customer" vertex="1">
+          <mxGeometry height="60" width="30" x="93" y="292" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_admin" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" value="Bank Admin" vertex="1">
+          <mxGeometry height="60" width="30" x="821" y="271" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_exchange" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Open account" vertex="1">
+          <mxGeometry height="60" width="120" x="355" y="135" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_transfer" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Transfer Funds" vertex="1">
+          <mxGeometry height="60" width="120" x="355" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_balance" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="View Transaction History" vertex="1">
+          <mxGeometry height="60" width="120" x="355" y="375" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_manage_rates" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Update Exchange Rates" vertex="1">
+          <mxGeometry height="60" width="120" x="355" y="455" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_audit" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Audit Transactions" vertex="1">
+          <mxGeometry height="60" width="120" x="355" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="edge1" edge="1" parent="1" source="actor_user" style="endArrow=none;html=1;rounded=0;" target="uc_exchange">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge2" edge="1" parent="1" source="actor_user" style="endArrow=none;html=1;rounded=0;" target="uc_transfer">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge4" edge="1" parent="1" source="actor_admin" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" target="uc_manage_rates">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge5" edge="1" parent="1" source="actor_admin" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" target="uc_audit">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="790" y="300" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge6" edge="1" parent="1" source="actor_admin" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" target="uc_balance">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sr3Lcem74erj5iztOOXT-1" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="View Account Info" vertex="1">
+          <mxGeometry height="60" width="120" x="355" y="295" as="geometry" />
+        </mxCell>
+        <mxCell id="sr3Lcem74erj5iztOOXT-2" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;" target="sr3Lcem74erj5iztOOXT-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="240" y="320" />
+            </Array>
+            <mxPoint x="130" y="320" as="sourcePoint" />
+            <mxPoint x="210" y="317" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sr3Lcem74erj5iztOOXT-3" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" target="actor_admin">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="475" y="321.5" as="sourcePoint" />
+            <mxPoint x="715" y="322" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sr3Lcem74erj5iztOOXT-4" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Manage Account" vertex="1">
+          <mxGeometry height="60" width="120" x="354" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="sr3Lcem74erj5iztOOXT-5" edge="1" parent="1" source="actor_admin" style="endArrow=none;html=1;rounded=0;entryX=1;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" target="sr3Lcem74erj5iztOOXT-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="710" y="340" as="sourcePoint" />
+            <mxPoint x="461" y="628" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sr3Lcem74erj5iztOOXT-6" edge="1" parent="1" source="uc_exchange" style="endArrow=none;html=1;rounded=0;exitX=0.908;exitY=0.8;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" target="actor_admin">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="480" y="180" as="sourcePoint" />
+            <mxPoint x="710" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tqDlnJetiObPYRZhotiu-1" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Check Balance" vertex="1">
+          <mxGeometry height="50" width="100" x="610" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="tqDlnJetiObPYRZhotiu-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="520" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="tqDlnJetiObPYRZhotiu-6" edge="1" parent="1" source="uc_transfer" style="endArrow=classicThin;dashed=1;endFill=1;endSize=12;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.913;exitY=0.267;exitDx=0;exitDy=0;exitPerimeter=0;" target="tqDlnJetiObPYRZhotiu-1" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="475" y="244.5" as="sourcePoint" />
+            <mxPoint x="590" y="175.85000000000002" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tqDlnJetiObPYRZhotiu-9" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Verify Identity" vertex="1">
+          <mxGeometry height="50" width="100" x="590" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="tqDlnJetiObPYRZhotiu-10" edge="1" parent="1" style="endArrow=classicThin;dashed=1;endFill=1;endSize=12;html=1;rounded=0;entryX=0.045;entryY=0.68;entryDx=0;entryDy=0;entryPerimeter=0;" target="tqDlnJetiObPYRZhotiu-9" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="481.5" y="317.75" as="sourcePoint" />
+            <mxPoint x="580" y="292.25" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tqDlnJetiObPYRZhotiu-12" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="486.5" y="284.25" as="geometry" />
+        </mxCell>
+        <mxCell id="tqDlnJetiObPYRZhotiu-13" edge="1" parent="1" style="endArrow=classicThin;dashed=1;endFill=1;endSize=12;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="tqDlnJetiObPYRZhotiu-9" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="475" y="249.5" as="sourcePoint" />
+            <mxPoint x="570" y="215" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tqDlnJetiObPYRZhotiu-14" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="490" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="tqDlnJetiObPYRZhotiu-15" edge="1" parent="1" style="endArrow=classicThin;dashed=1;endFill=1;endSize=12;html=1;rounded=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" target="tqDlnJetiObPYRZhotiu-9" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="470" y="389.5" as="sourcePoint" />
+            <mxPoint x="595" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tqDlnJetiObPYRZhotiu-18" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="490" y="331" as="geometry" />
+        </mxCell>
+        <mxCell id="tqDlnJetiObPYRZhotiu-21" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Send Notification" vertex="1">
+          <mxGeometry height="50" width="100" x="610" y="165" as="geometry" />
+        </mxCell>
+        <mxCell id="tqDlnJetiObPYRZhotiu-25" edge="1" parent="1" source="tqDlnJetiObPYRZhotiu-21" style="endArrow=classicThin;dashed=1;endFill=1;endSize=12;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="uc_transfer" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="580" y="319.5" as="sourcePoint" />
+            <mxPoint x="715" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tqDlnJetiObPYRZhotiu-26" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="520" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="tqDlnJetiObPYRZhotiu-27" edge="1" parent="1" source="actor_user" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="uc_balance" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+            <mxPoint x="123" y="326" as="sourcePoint" />
+            <mxPoint x="362" y="391" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sr3Lcem74erj5iztOOXT-7" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div align=&quot;left&quot;&gt;&lt;font face=&quot;Helvetica&quot; style=&quot;font-size: 14px;&quot;&gt;This diagram defines the core financial lifecycle and operational constraints of the banking system. It emphasizes security and business logic by &lt;b data-path-to-node=&quot;1&quot; data-index-in-node=&quot;146&quot;&gt;including&lt;/b&gt; &lt;code data-path-to-node=&quot;1&quot; data-index-in-node=&quot;156&quot;&gt;Verify Identity&lt;/code&gt; for all sensitive actions (&lt;code data-path-to-node=&quot;1&quot; data-index-in-node=&quot;199&quot;&gt;Transfer Funds&lt;/code&gt;, &lt;code data-path-to-node=&quot;1&quot; data-index-in-node=&quot;215&quot;&gt;View Account Info&lt;/code&gt;, &lt;code data-path-to-node=&quot;1&quot; data-index-in-node=&quot;234&quot;&gt;View Transaction History&lt;/code&gt;) and mandating a &lt;code data-path-to-node=&quot;1&quot; data-index-in-node=&quot;276&quot;&gt;Check Balance&lt;/code&gt; during funds movement. Additionally, it features an &lt;b data-path-to-node=&quot;1&quot; data-index-in-node=&quot;342&quot;&gt;extend&lt;/b&gt; relationship where &lt;code data-path-to-node=&quot;1&quot; data-index-in-node=&quot;368&quot;&gt;Send Notification&lt;/code&gt; serves as an optional post-transaction task. The model clearly delineates the roles of the &lt;b data-path-to-node=&quot;1&quot; data-index-in-node=&quot;477&quot;&gt;Customer&lt;/b&gt;, who manages personal assets, and the &lt;b data-path-to-node=&quot;1&quot; data-index-in-node=&quot;524&quot;&gt;Bank Admin&lt;/b&gt;, who oversees system-wide functions like rate updates and transaction auditing.&lt;/font&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;font face=&quot;Helvetica&quot; style=&quot;font-size: 14px;&quot;&gt;&lt;br&gt;&lt;span data-path-to-node=&quot;1&quot; data-index-in-node=&quot;137&quot;&gt;Key Actors:&lt;/span&gt;&lt;span data-path-to-node=&quot;1&quot; data-index-in-node=&quot;149&quot;&gt;&amp;nbsp;Customer, Bank Admin&lt;/span&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt; " vertex="1">
+          <mxGeometry height="215" width="280" x="20" y="440" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

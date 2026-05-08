@@ -1,0 +1,130 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="02pl4VQFg-tc0q0uCEew">
+    <mxGraphModel dx="984" dy="1821" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="sys_boundary" parent="1" style="shape=mxgraph.basic.rect;fillColor2=none;strokeWidth=1;size=20;indent=5;verticalAlign=top;fontStyle=1;fontSize=14;" value="Banking System" vertex="1">
+          <mxGeometry height="590" width="480" x="340" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_user" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" value="Bank Admin" vertex="1">
+          <mxGeometry height="60" width="30" x="93" y="292" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_admin" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" value="Auditor" vertex="1">
+          <mxGeometry height="60" width="30" x="843" y="293" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_exchange" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Approve New Account Application" vertex="1">
+          <mxGeometry height="60" width="120" x="367" y="135" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_transfer" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Freeze/Unfreeze customer account" vertex="1">
+          <mxGeometry height="60" width="120" x="367" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_balance" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="View Exchange&amp;nbsp; &amp;nbsp; Rate History" vertex="1">
+          <mxGeometry height="55" width="123" x="367" y="375" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_manage_rates" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="View Account Info" vertex="1">
+          <mxGeometry height="60" width="120" x="367" y="455" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_audit" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Audit Transactions" vertex="1">
+          <mxGeometry height="60" width="120" x="367" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="edge1" edge="1" parent="1" source="actor_user" style="endArrow=none;html=1;rounded=0;" target="uc_exchange">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge2" edge="1" parent="1" source="actor_user" style="endArrow=none;html=1;rounded=0;" target="uc_transfer">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge3" edge="1" parent="1" source="actor_user" style="endArrow=none;html=1;rounded=0;" target="uc_balance">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge4" edge="1" parent="1" source="actor_admin" style="endArrow=none;html=1;rounded=0;" target="uc_manage_rates">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge5" edge="1" parent="1" source="actor_admin" style="endArrow=none;html=1;rounded=0;" target="uc_audit">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge6" edge="1" parent="1" source="actor_admin" style="endArrow=none;html=1;rounded=0;" target="uc_balance">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sr3Lcem74erj5iztOOXT-1" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Updat Exchange Rate" vertex="1">
+          <mxGeometry height="60" width="120" x="367" y="295" as="geometry" />
+        </mxCell>
+        <mxCell id="sr3Lcem74erj5iztOOXT-2" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;" target="sr3Lcem74erj5iztOOXT-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="240" y="320" />
+            </Array>
+            <mxPoint x="130" y="320" as="sourcePoint" />
+            <mxPoint x="210" y="317" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sr3Lcem74erj5iztOOXT-4" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Generate Audit Report" vertex="1">
+          <mxGeometry height="60" width="120" x="610" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="sr3Lcem74erj5iztOOXT-7" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;This diagram illustrates the backend management and regulatory oversight functions of the banking system. It focuses on administrative integrity by &lt;b data-path-to-node=&quot;5&quot; data-index-in-node=&quot;148&quot;&gt;including&lt;/b&gt; mandatory &lt;code data-path-to-node=&quot;5&quot; data-index-in-node=&quot;168&quot;&gt;System Logging&lt;/code&gt; for sensitive operations such as &lt;code data-path-to-node=&quot;5&quot; data-index-in-node=&quot;216&quot;&gt;Freeze/Unfreeze Customer Account&lt;/code&gt; and &lt;code data-path-to-node=&quot;5&quot; data-index-in-node=&quot;253&quot;&gt;Update Exchange Rate&lt;/code&gt;, ensuring a transparent audit trail. The model handles exceptional workflows via &lt;b data-path-to-node=&quot;5&quot; data-index-in-node=&quot;355&quot;&gt;extend&lt;/b&gt; relationships, where an account application may be &lt;code data-path-to-node=&quot;5&quot; data-index-in-node=&quot;413&quot;&gt;Deferred&lt;/code&gt; or &lt;code data-path-to-node=&quot;5&quot; data-index-in-node=&quot;425&quot;&gt;Rejected&lt;/code&gt; based on specific compliance criteria. Key actors include the &lt;b data-path-to-node=&quot;5&quot; data-index-in-node=&quot;496&quot;&gt;Bank Admin&lt;/b&gt;, responsible for internal controls and platform maintenance, and the &lt;b data-path-to-node=&quot;5&quot; data-index-in-node=&quot;576&quot;&gt;Auditor&lt;/b&gt;, who performs independent reviews of transaction histories and account information to &lt;code data-path-to-node=&quot;5&quot; data-index-in-node=&quot;670&quot;&gt;Generate Audit Reports&lt;/code&gt; for financial compliance.&lt;/font&gt;" vertex="1">
+          <mxGeometry height="220" width="310" x="10" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="sr3Lcem74erj5iztOOXT-8" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;entryX=0.021;entryY=0.341;entryDx=0;entryDy=0;entryPerimeter=0;" target="uc_manage_rates">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="123" y="340" as="sourcePoint" />
+            <mxPoint x="375" y="403" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tqDlnJetiObPYRZhotiu-1" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="System Logging" vertex="1">
+          <mxGeometry height="60" width="120" x="620" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="tqDlnJetiObPYRZhotiu-2" edge="1" parent="1" style="endArrow=classicThin;dashed=1;endFill=1;endSize=12;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.913;exitY=0.267;exitDx=0;exitDy=0;exitPerimeter=0;" target="tqDlnJetiObPYRZhotiu-1" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="487" y="241" as="sourcePoint" />
+            <mxPoint x="632" y="135" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tqDlnJetiObPYRZhotiu-3" edge="1" parent="1" style="endArrow=classicThin;dashed=1;endFill=1;endSize=12;html=1;rounded=0;entryX=0.075;entryY=0.733;entryDx=0;entryDy=0;exitX=0.913;exitY=0.267;exitDx=0;exitDy=0;exitPerimeter=0;entryPerimeter=0;" target="tqDlnJetiObPYRZhotiu-1" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="487" y="330" as="sourcePoint" />
+            <mxPoint x="620" y="369" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tqDlnJetiObPYRZhotiu-4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="520" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="tqDlnJetiObPYRZhotiu-5" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="520" y="295" as="geometry" />
+        </mxCell>
+        <mxCell id="tqDlnJetiObPYRZhotiu-6" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Defer Application" vertex="1">
+          <mxGeometry height="60" width="120" x="620" y="75" as="geometry" />
+        </mxCell>
+        <mxCell id="tqDlnJetiObPYRZhotiu-7" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Reject Application" vertex="1">
+          <mxGeometry height="60" width="120" x="620" y="155" as="geometry" />
+        </mxCell>
+        <mxCell id="tqDlnJetiObPYRZhotiu-8" edge="1" parent="1" source="tqDlnJetiObPYRZhotiu-6" style="endArrow=classicThin;dashed=1;endFill=1;endSize=12;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0.017;exitY=0.633;exitDx=0;exitDy=0;exitPerimeter=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="617.5" y="100" as="sourcePoint" />
+            <mxPoint x="482.5" y="155" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tqDlnJetiObPYRZhotiu-10" edge="1" parent="1" source="tqDlnJetiObPYRZhotiu-7" style="endArrow=classicThin;dashed=1;endFill=1;endSize=12;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.958;entryY=0.683;entryDx=0;entryDy=0;entryPerimeter=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="614.02" y="180" as="sourcePoint" />
+            <mxPoint x="475.98" y="170.98000000000002" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tqDlnJetiObPYRZhotiu-11" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="530" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="tqDlnJetiObPYRZhotiu-12" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="520" y="165" as="geometry" />
+        </mxCell>
+        <mxCell id="tqDlnJetiObPYRZhotiu-14" edge="1" parent="1" style="endArrow=classicThin;dashed=1;endFill=1;endSize=12;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.913;exitY=0.267;exitDx=0;exitDy=0;exitPerimeter=0;" target="sr3Lcem74erj5iztOOXT-4" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="487" y="570" as="sourcePoint" />
+            <mxPoint x="620" y="609" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tqDlnJetiObPYRZhotiu-15" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="510" y="550" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
