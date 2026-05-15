@@ -42,24 +42,31 @@ Activity started...
 Mohammad logged into the system.
 Activity completed.
 ===================================
+
+===================================
+Function: submit_assignment
+Time: 2026-05-16 08:56:31.440037
+Activity started...
+Mohammad submitted Python Decorator Project.
+Activity completed.
+===================================
+
+===================================
+Function: view_grades
+Time: 2026-05-16 08:56:31.440052
+Activity started...
+Alex is viewing grades.
+Activity completed.
+===================================
+
 ```
 
 ## Findings
 
-The project uses decorators well to separate logging from the main student actions.
-This makes the code easier to maintain because the logging logic is written once and reused
-for multiple functions.
+The decorator works correctly. It prints extra logging messages before and after each
+student action.
 
-One important debugging conclusion is that the decorator is responsible for the extra output,
-not the functions in `users.py`. If a future bug appears in the logging sequence, the first
-place to inspect should be the `wrapper` inside `log_activity`.
+There is one logic problem in the example. `Alex` can view grades without logging in
+first. In a real system, a user should log in before viewing grades.
 
-Another useful observation is that this example does not use `functools.wraps`, so metadata
-such as the original function name object can be partially hidden by the wrapper in more
-advanced cases. The current example still works because it prints `func.__name__` from the
-closure, but adding `@wraps(func)` would make the decorator more complete.
-
-There is also a small logic issue in the sample flow: `Alex` is able to call
-`view_grades()` without logging in first. This does not break the program because the
-current project only prints messages and does not validate login state, but in a real
-system this would be considered a logic flaw.
+The logging messages come from the decorator, not from the functions in `users.py`.
