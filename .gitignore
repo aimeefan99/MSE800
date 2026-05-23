@@ -11,3 +11,7 @@ MSE800-PSD/Week6/Activity2/__pycache__/decorators.cpython-314.pyc
 MSE800-PSD/Week6/Activity2/__pycache__/decorators.cpython-313.pyc
 MSE800-PSD/Week6/Activity1/student_login_project_sample/decorators.py
 MSE800-PSD/Week6/Decorator.py
+
+# macOS
+.DS_Store
+**/.DS_Store
