@@ -39,6 +39,7 @@ def add_fish(fish, capacity):
         print("Not enough space in the aquarium.")
         return False
 
+    # Reuse an existing category record if it is already in the database.
     category_id = get_or_create_category(fish.category)
     conn = create_connection()
     cursor = conn.cursor()
@@ -59,6 +60,7 @@ def view_fish():
     cursor = conn.cursor()
     cursor.execute(
         """
+        -- Count how many fish belong to each category.
         SELECT fish_categories.category_name, COUNT(aquarium_fish.id)
         FROM fish_categories
         LEFT JOIN aquarium_fish ON aquarium_fish.category_id = fish_categories.id

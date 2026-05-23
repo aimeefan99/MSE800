@@ -15,6 +15,7 @@ def create_table():
     cursor = conn.cursor()
     cursor.execute("DROP TABLE IF EXISTS aquarium_fish")
     cursor.execute("DROP TABLE IF EXISTS fish_categories")
+    # One table stores fish categories, and one table stores each fish.
     cursor.execute(
         """
         CREATE TABLE IF NOT EXISTS fish_categories (

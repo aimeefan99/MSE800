@@ -1,7 +1,7 @@
 from database import create_table
 from fish_manager import add_fish, view_all_fish_details, view_fish
 
-
+# The factory pattern is used to create fish objects from user input.
 class Fish:
     def __init__(self, name, category, color, appearance, size, age):
         self.name = name
@@ -13,6 +13,7 @@ class Fish:
 
 
 class FishFactory:
+    # The factory creates fish objects from user input.
     def create_fish(self, name, category, color, appearance, size, age):
         valid_categories = ["goldfish", "shark", "angelfish", "tuna", "salmon"]
         if category not in valid_categories:
@@ -83,6 +84,7 @@ def main():
             if not rows:
                 print("No fish found.")
             else:
+                # Show the total number of fish in each category.
                 print("\nFish currently available in the aquarium:")
                 for row in rows:
                     print("Category: " + str(row[0]) + ", Quantity: " + str(row[1]))
