@@ -1,9 +1,9 @@
 from database import create_table
 from fish_manager import add_fish, view_all_fish_details, view_fish
 
-# The factory pattern is used to create fish objects from user input.
+# The Fish class represents a fish with attributes such as name, category, color, appearance, size, and age.
 class Fish:
-    def __init__(self, name, category, color, appearance, size, age):
+    def __init__(self, name, category, color, appearance, size, age): 
         self.name = name
         self.category = category
         self.color = color
@@ -11,14 +11,14 @@ class Fish:
         self.size = size
         self.age = age
 
-
+# The factory creates fish objects from user input.
+# It is used here to encapsulate the creation of fish objects and to ensure that only valid fish categories are created.
 class FishFactory:
-    # The factory creates fish objects from user input.
     def create_fish(self, name, category, color, appearance, size, age):
         valid_categories = ["goldfish", "shark", "angelfish", "tuna", "salmon"]
         if category not in valid_categories:
             return None
-        return Fish(name, category.capitalize(), color, appearance, size, age)
+        return Fish(name, category.capitalize(), color, appearance, size, age) 
 
 
 def menu():
