@@ -21,11 +21,13 @@ class AnimalFactory(Factory):
 class DogFactory(Factory):
     
     def create_product(self, kind=None):
+        #pass
         return Dog()
 
 class CatFactory(Factory):
     
     def create_product(self, kind=None):
+        #pass
         return Cat()
 
 class Animals(ABC):
@@ -49,11 +51,11 @@ class Cat(Animals):
 
 # client
 factory = DogFactory()
-dog = Dog()
-#dog = factory.create_product()
+#dog = Dog()
+dog = factory.create_product()
 dog.run()
 
 factory = CatFactory()
-cat = Cat()
-#cat = factory.create_product()
+#cat = Cat()
+cat = factory.create_product()
 cat.run()

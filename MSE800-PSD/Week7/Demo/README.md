@@ -4,26 +4,59 @@ GitHub link: https://github.com/aimeefan99/MSE800
 
 File: `MSE800-PSD/Week7/Demo/factory_pattern.py`
 
-This code is an example of the Factory Design Pattern. It uses a factory to create objects instead of creating them directly.
+This file is a sample of the Factory Design Pattern. The idea of this pattern is to use a factory to create objects instead of creating them directly in the client code.
 
-There are classes and subclasses in the code. `Factory` is the parent class of `AnimalFactory`, `DogFactory`, and `CatFactory`. `Animals` is the parent class of `Dog` and `Cat`.
+There are classes and subclasses in this code.
 
-The expected result is that the factory creates a `Dog` or `Cat`, and then the object can use `run()`.
+- `Factory` is the parent class
+- `AnimalFactory`, `DogFactory`, and `CatFactory` are subclasses of `Factory`
+- `Animals` is the parent class
+- `Dog` and `Cat` are subclasses of `Animals`
 
-However, in the current code, `DogFactory.create_product()` only has `pass`, so it does not create anything and returns `None`. Because of that, `dog.run()` gives an error:
+## Why the original code gives an error
 
-`AttributeError: 'NoneType' object has no attribute 'run'`
-
-To make it work, this part can be changed from:
+In the original code, `DogFactory.create_product()` only has:
 
 ```python
-class DogFactory(Factory):
-    
-    def create_product(self, kind=None):
-        pass
+def create_product(self, kind=None):
+    pass
 ```
 
-to:
+`pass` means the method does nothing. Because there is no `return` statement, Python returns `None`.
+
+In the client code:
+
+```python
+factory = DogFactory()
+dog = Dog()
+dog = factory.create_product()
+
+dog.run()
+```
+
+At first, `dog = Dog()` creates a `Dog` object. But the next line:
+
+```python
+dog = factory.create_product()
+```
+
+replaces `dog` with the result of `create_product()`. Since `create_product()` returns `None`, `dog` becomes `None`.
+
+So when the program runs:
+
+```python
+dog.run()
+```
+
+it gives this error:
+
+```python
+AttributeError: 'NoneType' object has no attribute 'run'
+```
+
+## How to fix it
+
+To make the code work, `DogFactory` should return a real `Dog` object:
 
 ```python
 class DogFactory(Factory):
@@ -32,8 +65,57 @@ class DogFactory(Factory):
         return Dog()
 ```
 
-After this change, the output will be:
+`CatFactory` can also be fixed in the same way:
+
+```python
+class CatFactory(Factory):
+    
+    def create_product(self, kind=None):
+        return Cat()
+```
+
+Another simple way is to comment out:
+
+```python
+dog = factory.create_product()
+```
+
+Then the client code keeps the object created by:
+
+```python
+dog = Dog()
+```
+
+So `dog.run()` works. This makes the script run, but it does not really use the factory to create the object.
+
+## Outcome after the fix
+
+After changing `pass` to `return Dog()`, the factory can create a real `Dog` object. Then `dog.run()` will work successfully and the output will be:
 
 ```python
 I'm a Dog, I can run!!
 ```
+
+So, the original file shows the structure of the Factory Pattern, but it is incomplete. After returning a real object from the factory method, the program works correctly.
+
+If both factory methods are changed and the client code uses the factory directly:
+
+```python
+# client
+factory = DogFactory()
+dog = factory.create_product()
+dog.run()
+
+factory = CatFactory()
+cat = factory.create_product()
+cat.run()
+```
+
+the program runs successfully with this output:
+
+```python
+I'm a Dog, I can run!!
+I'm a Cat, I can run!!
+```
+
+This is the correct way to use the Factory Pattern in this example, because the objects are created by the factory, not directly by `Dog()` or `Cat()`.
