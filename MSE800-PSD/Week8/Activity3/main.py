@@ -38,9 +38,14 @@ class InternationalFlight(Flight):
         )
 
 
-domestic_flight = DomesticFlight("NZ101", "Auckland", "Wellington")
-international_flight = InternationalFlight("NZ289", "Auckland", "China")
+def main():
+    domestic_flight = DomesticFlight("NZ101", "Auckland", "Wellington")
+    international_flight = InternationalFlight("NZ289", "Auckland", "China")
 
-print("Air New Zealand Flight System")
-print(domestic_flight.show_details())
-print(international_flight.show_details())
+    print("Air New Zealand Flight System")
+    print(domestic_flight.show_details())
+    print(international_flight.show_details())
+
+
+if __name__ == "__main__":
+    main()
