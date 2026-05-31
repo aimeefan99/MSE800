@@ -1,0 +1,63 @@
+<mxGraphModel dx="1540" dy="1032" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1100" background="#ffffff" math="0" shadow="0">
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+    <mxCell id="flight" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#dae8fc;fontSize=13;" value="&lt;b&gt;Flight&lt;/b&gt;&lt;hr&gt;flight_number&lt;br&gt;departure&lt;br&gt;destination&lt;br&gt;carry_on_allowance&lt;br&gt;checked_baggage_allowance&lt;hr&gt;show_route()&lt;br&gt;show_baggage()&lt;br&gt;show_summary()" vertex="1">
+      <mxGeometry height="210" width="300" x="530" y="30" as="geometry" />
+    </mxCell>
+    <mxCell id="domestic" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#d5e8d4;fontSize=13;" value="&lt;b&gt;DomesticFlight&lt;/b&gt;&lt;hr&gt;&lt;hr&gt;flight_type()&lt;br&gt;check_in_info()&lt;br&gt;show_domestic_rule()" vertex="1">
+      <mxGeometry height="150" width="250" x="240" y="310" as="geometry" />
+    </mxCell>
+    <mxCell id="international" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffe6cc;fontSize=13;" value="&lt;b&gt;InternationalFlight&lt;/b&gt;&lt;hr&gt;&lt;hr&gt;flight_type()&lt;br&gt;check_visa()&lt;br&gt;show_international_rule()" vertex="1">
+      <mxGeometry height="150" width="270" x="880" y="300" as="geometry" />
+    </mxCell>
+    <mxCell id="direct" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#e1d5e7;fontSize=13;" value="&lt;b&gt;DirectFlight&lt;/b&gt;&lt;hr&gt;&lt;hr&gt;flight_mode()&lt;br&gt;show_stop_info()&lt;br&gt;travel_note()" vertex="1">
+      <mxGeometry height="150" width="220" x="255" y="910" as="geometry" />
+    </mxCell>
+    <mxCell id="transit" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#f8cecc;fontSize=13;" value="&lt;b&gt;TransitFlight&lt;/b&gt;&lt;hr&gt;stopover&lt;hr&gt;flight_mode()&lt;br&gt;show_stop_info()&lt;br&gt;travel_note()" vertex="1">
+      <mxGeometry height="160" width="240" x="900" y="900" as="geometry" />
+    </mxCell>
+    <mxCell id="dd" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#d5e8d4;fontSize=13;" value="&lt;b&gt;DomesticDirectFlight&lt;/b&gt;&lt;hr&gt;&lt;hr&gt;show_details()&lt;br&gt;show_full_trip()&lt;br&gt;show_summary()" vertex="1">
+      <mxGeometry height="150" width="260" x="90" y="600" as="geometry" />
+    </mxCell>
+    <mxCell id="dt" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#d5e8d4;fontSize=13;" value="&lt;b&gt;DomesticTransitFlight&lt;/b&gt;&lt;hr&gt;&lt;hr&gt;show_details()&lt;br&gt;show_full_trip()&lt;br&gt;show_summary()" vertex="1">
+      <mxGeometry height="150" width="270" x="390" y="600" as="geometry" />
+    </mxCell>
+    <mxCell id="id" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffe6cc;fontSize=13;" value="&lt;b&gt;InternationalDirectFlight&lt;/b&gt;&lt;hr&gt;&lt;hr&gt;show_details()&lt;br&gt;show_full_trip()&lt;br&gt;show_summary()" vertex="1">
+      <mxGeometry height="150" width="290" x="730" y="600" as="geometry" />
+    </mxCell>
+    <mxCell id="it" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#ffe6cc;fontSize=13;" value="&lt;b&gt;InternationalTransitFlight&lt;/b&gt;&lt;hr&gt;&lt;hr&gt;show_details()&lt;br&gt;show_full_trip()&lt;br&gt;show_summary()" vertex="1">
+      <mxGeometry height="150" width="300" x="1050" y="600" as="geometry" />
+    </mxCell>
+    <mxCell id="e1" edge="1" parent="1" source="domestic" style="endArrow=block;endFill=0;html=1;rounded=0;strokeWidth=2;" target="flight" value="">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="e2" edge="1" parent="1" source="international" style="endArrow=block;endFill=0;html=1;rounded=0;strokeWidth=2;" target="flight" value="">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="e3" edge="1" parent="1" source="dd" style="endArrow=block;endFill=0;html=1;rounded=0;strokeWidth=2;" target="domestic" value="">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="e4" edge="1" parent="1" source="dt" style="endArrow=block;endFill=0;html=1;rounded=0;strokeWidth=2;" target="domestic" value="">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="e5" edge="1" parent="1" source="id" style="endArrow=block;endFill=0;html=1;rounded=0;strokeWidth=2;" target="international" value="">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="e6" edge="1" parent="1" source="it" style="endArrow=block;endFill=0;html=1;rounded=0;strokeWidth=2;" target="international" value="">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="e7" edge="1" parent="1" source="dd" style="endArrow=block;endFill=0;html=1;rounded=0;strokeWidth=2;" target="direct" value="">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="e8" edge="1" parent="1" source="dt" style="endArrow=block;endFill=0;html=1;rounded=0;strokeWidth=2;" target="transit" value="">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="e9" edge="1" parent="1" source="id" style="endArrow=block;endFill=0;html=1;rounded=0;strokeWidth=2;" target="direct" value="">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="e10" edge="1" parent="1" source="it" style="endArrow=block;endFill=0;html=1;rounded=0;strokeWidth=2;" target="transit" value="">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+  </root>
+</mxGraphModel>
