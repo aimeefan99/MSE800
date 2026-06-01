@@ -118,7 +118,3 @@ NZ202: Auckland -> Queenstown | Carry-on: 7kg | Checked bag: Depends on fare | S
 NZ289: Auckland -> Shanghai | Carry-on: 7kg | Checked bag: 2 bags x 23kg | Type: International Direct | Visa: Required | No stopover
 NZ777: Auckland -> London | Carry-on: 7kg | Checked bag: 2 bags x 23kg | Stopover: Singapore | Type: International Transit | Visa: Required | Check the next boarding gate during transit.
 ```
-
-## GitHub Link
-
-Add your GitHub repository link here after pushing the files.
