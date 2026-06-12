@@ -12,3 +12,15 @@ MSE800-PSD/Week6/Activity2/__pycache__/zoo_admin.cpython-313.pyc
 MSE800-PSD/Week6/Activity2/__pycache__/zoo_admin.cpython-314.pyc
 MSE800-PSD/Week6/Activity2/__pycache__/zoo_admin.cpython-38.pyc
 test/assessment2
+MSE800-PSD/Week10/Activity1/main.py
+MSE800-PSD/Week10/Activity1/templates/base.html
+MSE800-PSD/Week10/Activity1/templates/forgot_password.html
+MSE800-PSD/Week10/Activity1/templates/index.html
+MSE800-PSD/Week10/Activity1/templates/login.html
+MSE800-PSD/Week10/Activity1/templates/signup.html
+MSE800-PSD/Week10/Activity1/user_manager.py
+MSE800-PSD/Week10/bad_refactoring.py
+MSE800-PSD/Week10/process_data_0.py
+MSE800-PSD/Week10/process_data_1.py
+MSE800-PSD/Week10/ServiceManager.py
+MSE800-PSD/Week10/Activity1/database.py

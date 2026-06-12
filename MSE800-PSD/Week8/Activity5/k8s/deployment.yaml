@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: car-rental
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: car-rental
+  template:
+    metadata:
+      labels:
+        app: car-rental
+    spec:
+      containers:
+        - name: car-rental
+          image: car-rental-api:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8000
+          env:
+            - name: PORT
+              value: "8000"
+            - name: DB_PATH
+              value: /data/cars.db
+          volumeMounts:
+            - name: car-rental-storage
+              mountPath: /data
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 3
+            periodSeconds: 5
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 10
+            periodSeconds: 10
+      volumes:
+        - name: car-rental-storage
+          persistentVolumeClaim:
+            claimName: car-rental-pvc

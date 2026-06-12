@@ -1,0 +1,90 @@
+<mxGraphModel dx="1966" dy="912" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+    <mxCell id="system" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="Login &amp; Signup System" vertex="1">
+      <mxGeometry height="90" width="220" x="660" y="40" as="geometry" />
+    </mxCell>
+    <mxCell id="home" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="Home Page" vertex="1">
+      <mxGeometry height="80" width="150" x="140" y="210" as="geometry" />
+    </mxCell>
+    <mxCell id="signup" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="Sign Up" vertex="1">
+      <mxGeometry height="80" width="150" x="400" y="270" as="geometry" />
+    </mxCell>
+    <mxCell id="login" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="Login" vertex="1">
+      <mxGeometry height="80" width="150" x="695" y="210" as="geometry" />
+    </mxCell>
+    <mxCell id="forgot_password" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="Forgot Password" vertex="1">
+      <mxGeometry height="80" width="190" x="900" y="210" as="geometry" />
+    </mxCell>
+    <mxCell id="logout" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="Logout" vertex="1">
+      <mxGeometry height="80" width="140" x="1180" y="210" as="geometry" />
+    </mxCell>
+    <mxCell id="view_info" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="View Personal Information" vertex="1">
+      <mxGeometry height="90" width="230" x="100" y="400" as="geometry" />
+    </mxCell>
+    <mxCell id="personal_info" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="Enter Full Name&#xa;&amp; Date of Birth" vertex="1">
+      <mxGeometry height="100" width="220" x="190" y="520" as="geometry" />
+    </mxCell>
+    <mxCell id="account_creation" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="Create User Account" vertex="1">
+      <mxGeometry height="90" width="210" x="430" y="530" as="geometry" />
+    </mxCell>
+    <mxCell id="password_hash" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="Hash Password" vertex="1">
+      <mxGeometry height="90" width="210" x="740" y="790" as="geometry" />
+    </mxCell>
+    <mxCell id="credential_check" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="Validate Email&#xa;&amp; Password" vertex="1">
+      <mxGeometry height="100" width="220" x="660" y="360" as="geometry" />
+    </mxCell>
+    <mxCell id="password_verification" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="Compare Password&#xa;With Hashed Password" vertex="1">
+      <mxGeometry height="100" width="230" x="655" y="550" as="geometry" />
+    </mxCell>
+    <mxCell id="identity_check" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="Verify Email&#xa;&amp; Date of Birth" vertex="1">
+      <mxGeometry height="100" width="220" x="885" y="420" as="geometry" />
+    </mxCell>
+    <mxCell id="password_reset" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="Reset Password" vertex="1">
+      <mxGeometry height="90" width="180" x="1140" y="425" as="geometry" />
+    </mxCell>
+    <mxCell id="e1" edge="1" parent="1" source="system" style="endArrow=classic;html=1;rounded=0;" target="home">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="e2" edge="1" parent="1" source="system" style="endArrow=classic;html=1;rounded=0;" target="signup">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="e3" edge="1" parent="1" source="system" style="endArrow=classic;html=1;rounded=0;" target="login">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="e4" edge="1" parent="1" source="system" style="endArrow=classic;html=1;rounded=0;" target="forgot_password">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="e5" edge="1" parent="1" source="system" style="endArrow=classic;html=1;rounded=0;" target="logout">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="e6" edge="1" parent="1" source="home" style="endArrow=classic;html=1;rounded=0;" target="view_info">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="e7" edge="1" parent="1" source="signup" style="endArrow=classic;html=1;rounded=0;" target="personal_info">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="e8" edge="1" parent="1" source="signup" style="endArrow=classic;html=1;rounded=0;" target="account_creation">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="e8b" edge="1" parent="1" source="account_creation" style="endArrow=classic;html=1;rounded=0;" target="password_hash">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="e9" edge="1" parent="1" source="login" style="endArrow=classic;html=1;rounded=0;" target="credential_check">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="e9b" edge="1" parent="1" source="credential_check" style="endArrow=classic;html=1;rounded=0;" target="password_verification">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="e10" edge="1" parent="1" source="forgot_password" style="endArrow=classic;html=1;rounded=0;" target="identity_check">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="e11" edge="1" parent="1" source="forgot_password" style="endArrow=classic;html=1;rounded=0;" target="password_reset">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="e11b" edge="1" parent="1" source="password_reset" style="endArrow=classic;html=1;rounded=0;" target="password_hash">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+  </root>
+</mxGraphModel>
