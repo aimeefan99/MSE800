@@ -32,6 +32,8 @@ This project presents the design of a login and signup system for the MSE800 Wee
 
 The function design diagram breaks the system into clear project sections and related sub-functions:
 
+![Function Design Diagram](function_design.png)
+
 - `Login & Signup System` as the main system
 - `Home Page`, `Sign Up`, `Login`, `Forgot Password`, and `Logout` as the main sections
 - `View Personal Information`, `Enter Full Name & Date of Birth`, `Create User Account`, `Validate Email & Password`, `Compare Password With Hashed Password`, `Verify Email & Date of Birth`, `Reset Password`, and `Hash Password` as supporting functions
