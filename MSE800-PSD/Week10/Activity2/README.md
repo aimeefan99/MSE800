@@ -1,6 +1,6 @@
 # Week10 - Activity2: Tic-tac-toe Game
 
-This activity is a simple command-line Tic-tac-toe game for two players.
+This activity is a simple command-line Tic-tac-toe game for two players using object-oriented programming.
 
 ## Features
 
@@ -10,13 +10,14 @@ This activity is a simple command-line Tic-tac-toe game for two players.
 - Win detection
 - Draw detection
 - Replay option
-- Simple functional decomposition using separate rule and CLI functions
+- Simple object-oriented design with classes
 
 ## Program Structure
 
 - `main.py` is the program entry point.
-- `cli.py` handles user interaction, board display, and the game loop.
-- `game_rules.py` handles board creation, win checking, draw checking, and player switching.
+- `game.py` contains the main classes.
+- `Board` stores the board data and checks the board state.
+- `TicTacToeGame` controls the game flow and user interaction.
 
 ## Game Logic
 
@@ -38,5 +39,5 @@ Run:
 
 ## Coding Style
 
-- The code follows function-based design for readability and testing.
+- The code uses simple classes and methods for readability.
 - The file is intended to be checked with `pylint` and general PEP8 style rules.
