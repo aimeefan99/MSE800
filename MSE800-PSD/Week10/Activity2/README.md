@@ -38,8 +38,7 @@ This board has no winning row, column, or diagonal, and all positions are filled
 
 ## Run the Program
 
-1. Open the `Activity2` folder in the terminal.
-2. Run:
+Run:
 
    ```bash
    python main.py
@@ -47,6 +46,5 @@ This board has no winning row, column, or diagonal, and all positions are filled
 
 ## Coding Style
 
-- The program is written in a simple classroom style.
 - The code follows function-based design for readability and testing.
 - The file is intended to be checked with `pylint` and general PEP8 style rules.
