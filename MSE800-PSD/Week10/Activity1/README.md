@@ -1,6 +1,6 @@
 # Week10 - Activity1: Login & Signup System
 
-This project presents the design of a login and signup system for the MSE800 Week 10 Activity 1 task. The design focuses on clear functional breakdown, maintainability, scalability, and readability.
+This project is a command-line login and signup system for the MSE800 Week 10 Activity 1 task. It keeps the same account features as the original version, but removes the frontend pages and runs fully in the terminal.
 
 ## Core Features
 
@@ -15,8 +15,8 @@ This project presents the design of a login and signup system for the MSE800 Wee
 
 ## Functional Design Overview
 
-- `Home Page`
-  Displays the main entry page of the system and allows users to view personal information after login.
+- `Home Menu`
+  Displays the main command-line menu and allows users to view personal information after login.
 - `Sign Up`
   Collects the user's full name, date of birth, email, and password, then creates a new user account.
 - `Login`
@@ -46,6 +46,14 @@ This structure helps show how the system is organised at the design level withou
 2. The password is hashed before being stored.
 3. Log in with email and password.
 4. The entered password is compared with the hashed password.
-5. View personal information on the home page after login.
+5. View personal information in the terminal after login.
 6. If the password is forgotten, reset it using email and date of birth.
 7. The new password is processed through the shared `Hash Password` function before update.
+
+## Run the Program
+
+1. Install the dependency:
+   `pip install -r requirements.txt`
+2. Start the program:
+   `python main.py`
+3. Use the terminal menu to sign up, log in, reset a password, view personal information, and log out.
