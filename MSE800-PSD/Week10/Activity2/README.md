@@ -24,18 +24,6 @@ This activity is a simple command-line Tic-tac-toe game for two players.
 - A draw happens when the board is full and no player has won.
 - If there are still empty spaces and no winning line, the game continues.
 
-Example draw result:
-
-```text
- X | O | X
----+---+---
- O | O | X
----+---+---
- X | X | O
-```
-
-This board has no winning row, column, or diagonal, and all positions are filled, so the result is a draw.
-
 ## Run the Program
 
 Run:
@@ -43,6 +31,10 @@ Run:
    ```bash
    python main.py
    ```
+
+## Pylint Check
+
+![Pylint check result](pylintcheck.png)
 
 ## Coding Style
 
