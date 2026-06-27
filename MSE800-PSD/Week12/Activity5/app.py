@@ -1,6 +1,7 @@
-from flask import Flask, redirect, render_template, request, url_for
+from flask import Flask, redirect, render_template, request, session, url_for
 
 app = Flask(__name__)
+app.secret_key = "bmi-calculator-secret"
 
 
 @app.route("/")
@@ -33,14 +34,17 @@ def result():
         category = "Obese"
         comment = "Consider regular exercise and balanced eating habits.A healthy lifestyle plan may help improve your BMI."
 
-    return redirect(url_for("show_bmi", name=name, bmi=round(bmi, 2), category=category, comment=comment))
+    session["bmi"] = round(bmi, 2)
+    session["category"] = category
+    session["comment"] = comment
+    return redirect(url_for("show_bmi", name=name))
 
 
 @app.route("/username/<name>")
 def show_bmi(name):
-    bmi = request.args.get("bmi")
-    category = request.args.get("category")
-    comment = request.args.get("comment")
+    bmi = session.get("bmi")
+    category = session.get("category")
+    comment = session.get("comment")
     return render_template("result.html", name=name, bmi=bmi, category=category, comment=comment)
 
 
