@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Image</title>
+</head>
+<body style="background-color: #f4efe6; font-family: Georgia, 'Times New Roman', serif; color: #2f2a24;">
+    <h1 style="color: #7a3e00;">Upload an Image</h1>
+    <p>Select an image from your local computer and upload it to display on the next page.</p>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <label for="image" style="display: block; margin-bottom: 8px; font-weight: bold;">Browse for an image:</label>
+        <input id="image" type="file" name="image" accept="image/*" required style="margin-bottom: 12px; font-family: Georgia, 'Times New Roman', serif; font-size: 16px;">
+        <br>
+        <button type="submit" style="background-color: #0b5ea8; color: white; border: none; padding: 8px 14px; cursor: pointer; font-family: Georgia, 'Times New Roman', serif; font-size: 16px;">
+            Upload Image
+        </button>
+    </form>
+</body>
+</html>
