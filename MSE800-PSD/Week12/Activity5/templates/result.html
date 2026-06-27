@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Result</title>
+</head>
+<body style="background-color: #f4efe6; font-family: Georgia, 'Times New Roman', serif; color: #2f2a24;">
+    <h1 style="color: #7a3e00;">BMI Calculator Result</h1>
+    <p>{{ name }}, your BMI is: {{ bmi }}</p>
+    <p>{{ name }}, you are classified as: {{ category }}</p>
+    {% if comment %}
+    <p>{{ comment }}</p>
+    {% endif %}
+    <img src="/static/bmi.png" alt="BMI category chart" style="max-width: 420px; width: 100%; height: auto; border: 2px solid #7a3e00; margin: 16px 0;">
+    <p>
+        <a href="/" style="color: #6a2dbf;">Calculate Again</a>
+    </p>
+</body>
+</html>
